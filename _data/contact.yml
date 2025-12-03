@@ -1,0 +1,21 @@
+#  The contact options.
+#
+#  The 'type' is a specific identifier for the key of social link,
+#  and the 'icon' must be a FontAwesome icon class.
+#
+#  Find the icons: <https://fontawesome.com/icons?d=gallery&s=brands,regular,solid&m=free>
+
+-
+  type: github-alt
+  icon: "fab fa-github"
+  url: "https://github.com/nuno-joao-andrade"
+
+-
+  type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/nuno-andrade-964b2416"
+
+-
+  type: email
+  icon: "fas fa-envelope"
+  url: "mailto:nunojoaoandrade@gmail.com"

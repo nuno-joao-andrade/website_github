@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-12-03T11:55:59+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nuno João Andrade</title><subtitle>Senior Developer &amp; Google / Azure / AWS Cloud Platform Expert.  Sharing knowledge on Cloud, AI, and High-Performance Systems.</subtitle><author><name>Nuno João Andrade</name><email>nunojoaoandrade@gmail.com</email></author><entry><title type="html">Workshop: Product Feedback Accelerator with Gemini API &amp;amp; AlloyDB</title><link href="http://localhost:4000/posts/gemini-alloydb-workshop/" rel="alternate" type="text/html" title="Workshop: Product Feedback Accelerator with Gemini API &amp;amp; AlloyDB" /><published>2025-11-29T15:00:00+00:00</published><updated>2025-11-29T15:00:00+00:00</updated><id>http://localhost:4000/posts/gemini-alloydb-workshop</id><content type="html" xml:base="http://localhost:4000/posts/gemini-alloydb-workshop/"><![CDATA[<p>I recently had the pleasure of presenting a workshop at <a href="https://gdg.community.dev/events/details/google-gdg-lisbon-presents-devfest-lisbon-2025/">DevFest Lisbon 2025</a> on building high-performance AI-powered systems.</p>
+
+<p>The workshop, titled <strong>“Product Feedback Accelerator”</strong>, demonstrates how to leverage Google Cloud’s powerhouse tools—<strong>AlloyDB</strong> and <strong>Gemini API</strong>—to analyze and respond to user feedback at scale.</p>
+
+<h2 id="workshop-overview">Workshop Overview</h2>
+
+<p>In this session, we built a complete backend system capable of ingesting user feedback, analyzing sentiment, and generating AI-powered responses automatically.</p>
+
+<h3 id="key-technologies">Key Technologies</h3>
+
+<ul>
+  <li><strong>AlloyDB for PostgreSQL</strong>: Used for high-performance storage of product data and user ratings.</li>
+  <li><strong>Gemini API / Vertex AI</strong>: The intelligence layer for sentiment analysis, categorization, and generating replies.</li>
+  <li><strong>Node.js &amp; Cloud Run</strong>: The scalable backend infrastructure.</li>
+  <li><strong>Gemini-CLI</strong>: utilized to accelerate development by scaffolding boilerplate code and generating synthetic data.</li>
+</ul>
+
+<h2 id="what-we-built">What We Built</h2>
+
+<p>The workshop guides you through several distinct modules:</p>
+
+<ol>
+  <li><strong>Database Setup</strong>: configuring AlloyDB for PostgreSQL.</li>
+  <li><strong>AI-Driven Data</strong>: Using Gemini to generate synthetic testing data.</li>
+  <li><strong>API Scaffolding</strong>: Rapidly setting up a Node.js API.</li>
+  <li><strong>AI Integration</strong>: Implementing the logic to analyze feedback text and generate helpful responses.</li>
+  <li><strong>Performance</strong>: Leveraging AlloyDB’s speed for real-time analysis.</li>
+</ol>
+
+<h2 id="get-the-code">Get the Code</h2>
+
+<p>The full workshop materials, including code samples and step-by-step instructions, are available on GitHub.</p>
+
+<p><a href="https://github.com/nuno-joao-andrade/gemini-api-alloydb/"><strong>Check out the Repository on GitHub</strong></a></p>
+
+<p><a href="https://nuno-joao-andrade.github.io/gemini-api-alloydb/codelab/gemini-api-alloydb/"><strong>Access the Codelab Here</strong></a></p>
+
+<h2 id="special-thanks">Special Thanks</h2>
+
+<p>A huge thank you to the incredible team and community that made DevFest Lisbon 2025 possible and supported this workshop!</p>
+
+<ul>
+  <li><strong>Eimy Blanco</strong>: <a href="https://www.linkedin.com/in/eimy-blanco/">Connect on LinkedIn</a></li>
+  <li><strong>Liliana Pereira</strong>: <a href="https://www.linkedin.com/in/lcfpereira/">Connect on LinkedIn</a></li>
+  <li><strong>Diego Coy</strong>: <a href="https://www.linkedin.com/in/diegocoy/">Connect on LinkedIn</a></li>
+</ul>
+
+<p>Special shout-out to the vibrant community at #DevFestLisbon2025 and #GDG #TechCommunity!</p>
+
+<p>Learn more about the organizers: <a href="https://gdg.community.dev/gdg-lisbon/">GDG Lisbon</a></p>
+
+<p>If you missed DevFest Lisbon, you can still follow along with the README in the repo to build this system yourself!</p>]]></content><author><name>Nuno João Andrade</name><email>nunojoaoandrade@gmail.com</email></author><category term="workshop" /><category term="google-cloud" /><category term="gemini-cli" /><category term="ai" /><category term="alloydb" /><category term="gemini" /><category term="devfest" /><category term="gemini-cli" /><summary type="html"><![CDATA[I recently had the pleasure of presenting a workshop at DevFest Lisbon 2025 on building high-performance AI-powered systems.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.0_mul_h_sub_0.0_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/blob_Tfz4zsu" /><media:content medium="image" url="https://res.cloudinary.com/startup-grind/image/upload/c_scale,w_2560/c_crop,h_640,w_2560,y_0.0_mul_h_sub_0.0_mul_640/c_crop,h_640,w_2560/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/event_banners/blob_Tfz4zsu" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to My Tech &amp;amp; Cloud Blog</title><link href="http://localhost:4000/posts/welcome/" rel="alternate" type="text/html" title="Welcome to My Tech &amp;amp; Cloud Blog" /><published>2025-10-03T12:00:00+00:00</published><updated>2025-10-03T12:00:00+00:00</updated><id>http://localhost:4000/posts/welcome</id><content type="html" xml:base="http://localhost:4000/posts/welcome/"><![CDATA[<p>Welcome to my new blog!</p>
+
+<p>Here, I’ll be sharing my thoughts, experiences, and tutorials on technology, software development, and cloud computing.</p>
+
+<p>As a developer passionate about scalable and efficient systems, a significant portion of the content will focus on <strong>Google Cloud Platform (GCP)</strong>. Whether it’s serverless architectures, data analytics with BigQuery, or AI integration with Vertex AI, expect deep dives and practical guides.</p>
+
+<p>Stay tuned for upcoming posts where we’ll explore:</p>
+<ul>
+  <li>Cloud Infrastructure &amp; Architecture</li>
+  <li>Backend Development Best Practices</li>
+  <li>Google Cloud Tips &amp; Tricks</li>
+  <li>Emerging Tech Trends</li>
+</ul>
+
+<p>Thanks for stopping by!</p>]]></content><author><name>Nuno João Andrade</name><email>nunojoaoandrade@gmail.com</email></author><category term="blog" /><category term="introduction" /><category term="cloud" /><category term="google-cloud" /><category term="development" /><summary type="html"><![CDATA[Welcome to my new blog!]]></summary></entry></feed>

@@ -1,12 +1,14 @@
 ---
 layout: post
 title:  "Building a Modern Developer Blog"
-date:   2025-12-03 14:00:00 -0000
-categories: development tutorial
-youtube_id: "dQw4w9WgXcQ" # Example ID (Rick Roll) - replace with your own
+date:   2050-12-01 14:00:00 -0000
+categories: [development, tutorial]
+tags: [blogging, jekyll]
 ---
 
 Welcome to my new developer blog! In this video, I walk through the process of setting up a Jekyll site with integrated YouTube support.
+
+{% include embed/youtube.html id='dQw4w9WgXcQ' %}
 
 ## Why Video?
 
