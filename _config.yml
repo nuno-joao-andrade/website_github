@@ -55,6 +55,9 @@ collections:
 # Theme Settings
 paginate: 10
 
+# Social preview image (Open Graph)
+social_preview_image: /assets/img/avatar.jpeg
+
 # The avatar image url
 avatar: /assets/img/avatar.jpeg
 
