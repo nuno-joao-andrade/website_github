@@ -4,11 +4,25 @@ layout: default
 
 <article class="post">
     <header class="post-header">
-        <h2>{{ page.title }}</h2>
-        <p class="meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="meta post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
     </header>
 
     <div class="post-content">
+        {% if page.youtube_id %}
+        <div class="video-wrapper">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/{{ page.youtube_id }}" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        {% endif %}
+
         {{ content }}
     </div>
 </article>

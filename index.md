@@ -3,18 +3,21 @@ layout: default
 title: Home
 ---
 
-Hello! Welcome to my blog. Here you will find my thoughts on programming, technology, and more.
+Welcome. I document my journey in software engineering here, mixing written tutorials with deep-dive videos.
 
-## Latest Posts
+## Latest Updates
 
 <ul class="post-list">
   {% for post in site.posts %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h3>
-      <p>{{ post.excerpt }}</p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      {% if post.youtube_id %}
+        <small style="color: #e74c3c; font-weight: bold;">▶ Watch Video</small>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
