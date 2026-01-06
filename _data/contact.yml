@@ -16,7 +16,7 @@
   url: "https://www.linkedin.com/in/nuno-andrade-964b2416"
 
 -
-  type: email
+  type: work_email
   icon: "fas fa-envelope"
   noblank: true
-  url: "mailto:nunojoaoandrade@gmail.com"
+  url: "mailto:nja@nja.dev"
