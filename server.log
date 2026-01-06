@@ -1,0 +1,369 @@
+Configuration file: /home/nandrade/projects/website_github/_config.yml
+            Source: /home/nandrade/projects/website_github
+       Destination: /home/nandrade/projects/website_github/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    done in 0.3 seconds.
+ Auto-regeneration: enabled for '/home/nandrade/projects/website_github'
+    Server address: http://0.0.0.0:4000/
+  Server running... press ctrl-c to stop.
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:13
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.345440093 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:14
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.191266761 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:14
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.200881053 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:14
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.226579957 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:14
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.221978027 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:15
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.21323556 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:15
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.240535953 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:15
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.208525229 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:16
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.22480188 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:16
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.22036725 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:16
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.231564789 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:17
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.212041719 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:17
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.264028777 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:17
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.206733352 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:18
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.219272089 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:18
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.240462001 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:18
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.244580595 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:19
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.243830737 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:19
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.241124109 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:19
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.231032583 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:20
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.250852921 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:20
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.226914705 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:20
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.229144271 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:21
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.242317459 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:21
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.221858745 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:21
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.235239748 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:22
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.19004468 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:22
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.196409736 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:22
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.192545497 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:23
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[33m          Conflict: The following destination is shared by multiple files.[0m
+[33m                    The written file may end up with unexpected contents.[0m
+[33m                    [36m/home/nandrade/projects/website_github/_site/feed.xml[0m[0m
+[33m                     - assets/feed.xml[0m
+[33m                     - feed.xml[0m
+[33m                    [0m
+                    ...done in 0.255945885 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-01-06 15:15:23
+                    server.log
+       Jekyll Feed: Generating feed for posts
+[31m                    ------------------------------------------------[0m
+[31m      Jekyll 4.4.1   Please append `--trace` to the `serve` command [0m
+[31m                     for any additional information or backtrace. [0m
+[31m                    ------------------------------------------------[0m
+/home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in `join': SIGTERM (SignalException)
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:291:in `boot_or_detach'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:221:in `start_up_webrick'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:102:in `process'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `each'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/lib/jekyll/commands/serve.rb:85:in `block (2 levels) in init_with_program'
+	from /home/nandrade/gems/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute'
+	from /home/nandrade/gems/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `each'
+	from /home/nandrade/gems/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute'
+	from /home/nandrade/gems/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in `go'
+	from /home/nandrade/gems/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program'
+	from /home/nandrade/gems/gems/jekyll-4.4.1/exe/jekyll:15:in `<top (required)>'
+	from /home/nandrade/gems/bin/jekyll:25:in `load'
+	from /home/nandrade/gems/bin/jekyll:25:in `<main>'

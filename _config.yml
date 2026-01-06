@@ -6,7 +6,7 @@ description: >-
   Senior Developer & Google / Azure / AWS Cloud Platform Expert. 
   Sharing knowledge on Cloud, AI, and High-Performance Systems.
 url: "https://nja.dev" 
-baseurl: "/website_github" 
+baseurl: "" 
 
 # Theme
 theme: jekyll-theme-chirpy
