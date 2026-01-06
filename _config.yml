@@ -75,7 +75,7 @@ social:
     # - https://twitter.com/username
 
 google_analytics:
-  # id: "G-XXXXXXXXXX" # Fill with your Google Analytics ID
+  id: "G-WV7J140XT3" # Fill with your Google Analytics ID
 
 # Chirpy specific settings
 toc: true
