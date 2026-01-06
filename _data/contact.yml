@@ -18,4 +18,5 @@
 -
   type: email
   icon: "fas fa-envelope"
+  noblank: true
   url: "mailto:nunojoaoandrade@gmail.com"
