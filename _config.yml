@@ -5,8 +5,8 @@ tagline: Senior Dev & Cloud Expert,
 description: >-
   Senior Developer & Google / Azure / AWS Cloud Platform Expert. 
   Sharing knowledge on Cloud, AI, and High-Performance Systems.
-url: "" 
-baseurl: "/_site/" 
+url: "https://nja.dev" 
+baseurl: "/website_github" 
 
 # Theme
 theme: jekyll-theme-chirpy
