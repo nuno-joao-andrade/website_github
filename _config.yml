@@ -3,8 +3,8 @@ title: Nuno João Andrade
 tagline: Senior Dev & Cloud Expert, 
          Openwater Swimmer 
 description: >-
-  Senior Developer & Google / Azure / AWS Cloud Platform Expert. 
-  Sharing knowledge on Cloud, AI, and High-Performance Systems.
+  Senior Developer & Google / AWS Cloud Platform Expert. 
+  Sharing knowledge on Cloud, development, security, AI, and High-Performance Systems.
 url: "https://nja.dev" 
 baseurl: "" 
 
@@ -68,7 +68,7 @@ sidebar:
 
 social:
   name: Nuno João Andrade
-  email: nunojoaoandrade@gmail.com
+  email: nja@nja.dev
   links:
     - https://github.com/nuno-joao-andrade
     - https://www.linkedin.com/in/nuno-andrade-964b2416

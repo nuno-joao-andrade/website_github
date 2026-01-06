@@ -7,7 +7,7 @@ permalink: /about/
 ---
 
 # Nuno João Andrade
-### Senior Developer & Cloud Platform Expert (GCP / Azure / AWS)
+### Senior Developer & Cloud Platform Expert (GCP / AWS)
 **Google Developer Expert (GDE) for Cloud**
 
 I am an experienced Backend Developer and Cloud Architect with over **10 years of expertise in Cloud technologies**. I have built a strong reputation for resolving complex architectural problems and significantly improving project performance.
