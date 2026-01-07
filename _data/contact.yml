@@ -25,3 +25,8 @@
   type: youtube
   icon: "fab fa-youtube"
   url: "https://www.youtube.com/@njadev"
+
+-
+  type: rss
+  icon: "fas fa-rss"
+  url: "https://nja.dev/feed.xml"
