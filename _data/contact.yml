@@ -20,3 +20,8 @@
   icon: "fas fa-envelope"
   noblank: true
   url: "mailto:nja@nja.dev"
+
+-
+  type: youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/@njadev"
