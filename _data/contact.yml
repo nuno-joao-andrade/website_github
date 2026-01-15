@@ -9,11 +9,10 @@
   type: github-alt
   icon: "fab fa-github"
   url: "https://github.com/nuno-joao-andrade"
-
 -
-  type: linkedin
-  icon: "fab fa-linkedin"
-  url: "https://www.linkedin.com/in/nuno-andrade-964b2416"
+  type: rss
+  icon: "fas fa-rss"
+  url: "https://nja.dev/feed.xml"
 
 -
   type: work_email
@@ -22,11 +21,13 @@
   url: "mailto:nja@nja.dev"
 
 -
+  type: linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/nuno-andrade-964b2416"
+
+-
   type: youtube
   icon: "fab fa-youtube"
   url: "https://www.youtube.com/@njadev"
 
--
-  type: rss
-  icon: "fas fa-rss"
-  url: "https://nja.dev/feed.xml"
+
