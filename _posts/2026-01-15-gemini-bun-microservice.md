@@ -43,9 +43,16 @@ The goal is simple but ambitious:
 You can run this entire experiment yourself. All you need is the `gemini-cli` and the specification files included in this repository.
 
 ### 1. Prerequisites
-- **Gemini CLI** installed and authenticated.
-- **Google Cloud SDK (`gcloud`)** installed (for remote deployment).
-- **`wrk`** benchmarking tool installed (`sudo apt-get install wrk`).
+Ensure you have the following tools installed. These are required to run the agent, the runtimes, and the benchmarks:
+
+- **[Gemini CLI](https://github.com/GoogleCloudPlatform/gemini-cli)**: The AI agent interface.
+- **[Node.js](https://nodejs.org/)** (v22+): For running the Node.js microservice.
+- **[Bun](https://bun.sh/)** (Latest): For running the Bun microservice.
+- **[Docker](https://docs.docker.com/get-docker/)**: For containerization and Cloud Run deployment.
+- **[Google Cloud SDK](https://cloud.google.com/sdk/docs/install)**: For authenticated deployment to Cloud Run.
+- **[wrk](https://github.com/wg/wrk)**: The HTTP benchmarking tool (e.g., `sudo apt-get install wrk`).
+
+> **Note**: This project includes automation scripts to help you get started quickly. The `install_tools.sh` script can automate the installation of Node.js, Bun, gcloud, and wrk, while `setup_deploy.sh` handles Docker. Finally, `setup.sh` will initialize the services and seed the database.
 
 ### 2. Fetch the Code
 Clone the repository to your local machine:
@@ -106,6 +113,11 @@ To ensure a fair fight, we test more than just "Hello World". The generated benc
 4.  **CPU Bound**: `GET /perf/compute` (Recursive Fibonacci calculation).
 
 The results are automatically saved to `results_node.txt` and `results_bun.txt` for easy comparison.
+
+### ⚠️ Important Note on Benchmarking
+For accurate and fair results:
+- **Environment Isolation**: When running remote benchmarks, it is highly recommended to execute `wrk` from a separate virtual machine within the same VPC as the Cloud Run services to minimize network latency.
+- **Instance Focus**: The provided deployment scripts configure Cloud Run to use **exactly one instance** (`min-instances: 1`, `max-instances: 1`). This ensures we are benchmarking the raw performance of the Node.js and Bun runtimes themselves, rather than Cloud Run's auto-scaling capabilities.
 
 ---
 
