@@ -3,7 +3,7 @@ layout: post
 title: "Gemini Test: Bun vs Node Benchmark - Without Writing a Single Line of Code"
 date: 2026-01-15 08:00:00 -0000
 categories: [blog, introduction, cloud, microservices, performance,development]
-tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, vibecoding]
+tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, gde, google developer expert]
 image:
   path: /assets/img/bun-vs-node-v2.png
 ---
