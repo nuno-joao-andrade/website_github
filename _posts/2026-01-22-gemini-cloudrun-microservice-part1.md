@@ -16,6 +16,7 @@ Most cloud tutorials follow a path of "least resistance." They show you how to g
 Welcome to Part 1 of the **Gemini Workshop Series**. Today, we aren't just deploying Go code; we are building a **Fortress**.
 
 **[👉 View the full source code on GitHub](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1)**
+👉 [**Technical Documentation Table of Contents**](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1/tree/main/docs/README.md)
 
 ---
 
@@ -277,7 +278,8 @@ Test your fortified service:
 
 For a deep dive into the technical specifics, including architecture diagrams, line-by-line code explanations, and script breakdowns, visit the detailed documentation in the repository:
 
-👉 [**Technical Documentation Table of Contents**](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1/tree/main/docs)
+👉 [**Technical Documentation Table of Contents**](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1/tree/main/docs/README.md)
+**[👉 View the full source code on GitHub](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1)**
 
 ## 🏁 Conclusion
 
