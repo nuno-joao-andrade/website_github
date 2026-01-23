@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "🛡️ Building a Fortified Microservice: The Gemini Workshop (Part 1)"
+title: "🛡️ Building a Fortified Microservice: The Microservices Workshop (Part 1/3)"
 description: "Stop deploying insecure containers. Learn how to architect a 'Fortified' microservice on GCP with Private Cloud SQL, WAF protection, and zero-trust ingress."
 date: 2026-01-22
 image: "/assets/img/gcp-fortified-p1.png"
 tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, gde, google developer expert,golang, gcp, security, cloud-run, cloud-sql, devops]
 ---
 
-# 🛡️ Building a Fortified Microservice: The Gemini Workshop (Part 1)
+# 🛡️ Building a Fortified Microservice: The Microservices Workshop (Part 1/3)
 
 Most cloud tutorials follow a path of "least resistance." They show you how to get a container running as fast as possible, often sacrificing security for simplicity. You end up with public databases, wide-open ingress, and default service accounts.
 
 **In the real world, this is a liability.**
 
-Welcome to Part 1 of the **Gemini Workshop Series**. Today, we aren't just deploying Go code; we are building a **Fortress**.
+Welcome to Part 1 of the **Microservices Workshop Series**. Today, we aren't just deploying Go code; we are building a **Fortress**.
 
 **[👉 View the full source code on GitHub](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1)**
 👉 [**Technical Documentation Table of Contents**](https://github.com/nuno-joao-andrade-dev/cloudrun.gemini.series.part1/tree/main/docs/README.md)
