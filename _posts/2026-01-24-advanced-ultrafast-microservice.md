@@ -12,6 +12,7 @@ tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, 
 *Originally posted on nja.dev - High Performance Software Engineering*
 
 **Summary:** Learn how to build a high-performance C++ microservice for Google Cloud Run using a Pgpool-II sidecar, thread-local connections, and multi-level caching to achieve sub-millisecond API latency.
+The build process is done in a docker, so no need to install everything on your local environment, the docker will do that.
 
 ---
 
@@ -20,6 +21,9 @@ tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, 
 When I talk about **serverless microservices**, the standard "go-to" languages are usually Node.js, Python, or Go. But what happens when you need to squeeze every single microsecond of performance out of your infrastructure? What if your relational database is the bottleneck, not because of the query complexity, but because of the massive connection overhead inherent in serverless scaling?
 
 In this comprehensive case study, I’ll walk you through how I architected and built an **"Ultrafast" C++ Microservice** designed specifically for **Google Cloud Run**. By combining the raw, deterministic power of **C++17** with a local **Pgpool-II sidecar** pattern and a sophisticated **two-tier caching strategy** (Local RAM + Redis), I achieved consistent sub-millisecond latencies and high-throughput reliability under heavy load.
+
+**[👉 View the full source code on GitHub](https://github.com/nuno-joao-andrade-dev/advanced.ultrafast.cpp.microservice)**  
+**[📚 Read the technical documentation](https://github.com/nuno-joao-andrade-dev/advanced.ultrafast.cpp.microservice/blob/main/doc/README.md)**
 
 ---
 
