@@ -3,7 +3,7 @@ layout: post
 title: "Effortless Scale: How We Process Billions of Data Points Without a Single Server"
 description: "This presentation introduces a deep-dive case study on architecting a hyper-scale data processing pipeline on Google Cloud Platform (GCP)."
 date: 2026-02-08
-
+image: "/assets/img/effortless_thumb.png"
 tags: [cloud, google cloud, gcp, backend, development, gde, google developer expert,golang, c++, rust, gcp, performance, scale cloud-run, cloud-sql, devops, advanced]
 ---
 
@@ -39,7 +39,7 @@ The presentation "Effortless Scale: How We Process Billions of Data Points Witho
 
 **Detail:**
 This section contrasts the legacy approach with the modern serverless paradigm:
-*   **The Legacy Bottleneck:** Traditional big data stacks suffer from fixed capacity. Provisioning for peak load results in wasted resources during off-peak hours (high TCO). Scaling requires complex orchestration and manual intervention.
+*   **The Legacy Bottleneck:** Traditional big data stackssuffer from fixed capacity. Provisioning for peak load results in wasted resources during off-peak hours (high TCO). Scaling requires complex orchestration and manual intervention.
 *   **The Serverless Promise:**
     *   **Elasticity:** The ability to scale from 0 to 10,000+ vCPUs instantly based on the depth of the event queue.
     *   **Event-Driven:** The system reacts to data arrival, not a schedule.
