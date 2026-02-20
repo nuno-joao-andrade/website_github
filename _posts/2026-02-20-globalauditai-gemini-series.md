@@ -16,6 +16,16 @@ In this workshop, we move away from traditional line-by-line coding and embrace 
 ![GlobalAudit AI Workflow Architecture](/assets/img/workflow-diagram.png)
 *A high-level view of the Gemini CLI orchestration workflow.*
 
+
+## 📚 Resources & Links
+
+*   **[GlobalAudit AI GitHub Repository](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series)**
+*   **[System Architecture Deep-Dive](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/ARCHITECTURE.md)**
+*   **[Backend Implementation Details](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/BACKEND.md)**
+*   **[Frontend Implementation Details](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/FRONTEND.md)**
+*   **[Testing Strategy Overview](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/TESTING.md)**
+*   **[Deployment & DevOps Guide](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/DEPLOYMENT.md)**
+
 ---
 
 ## 🧠 The Paradigm Shift: Coding by Specification
@@ -80,11 +90,3 @@ You aren't just writing code anymore; you are managing a digital development tea
 
 ---
 
-## 📚 Resources & Links
-
-*   **[GlobalAudit AI GitHub Repository](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series)**
-*   **[System Architecture Deep-Dive](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/ARCHITECTURE.md)**
-*   **[Backend Implementation Details](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/BACKEND.md)**
-*   **[Frontend Implementation Details](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/FRONTEND.md)**
-*   **[Testing Strategy Overview](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/TESTING.md)**
-*   **[Deployment & DevOps Guide](https://github.com/nuno-joao-andrade-dev/globalauditai.gemini.series/blob/main/doc/DEPLOYMENT.md)**
