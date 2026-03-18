@@ -34,7 +34,7 @@ There are several ways to group incidents/tickets to solve them effectively:
 ---
 
 ### Resources & References
-*   **Article:** [nja.dev/adk_mongodb](https://nja.dev/adk_mongodb)
+*   **Article:** [nja.dev/adk_mongodb](https://nja.dev/posts/adk_mongodb)
 *   **Github:** [github.com/nuno-joao-andrade-dev/adk_mongodb](https://github.com/nuno-joao-andrade-dev/adk_mongodb)
 *   **Diagrams:** [drawit.nja.dev/?gallery=adk_mongodb](https://drawit.nja.dev/?gallery=adk_mongodb)
 
