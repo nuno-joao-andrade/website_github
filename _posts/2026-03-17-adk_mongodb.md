@@ -339,7 +339,7 @@ A huge thank you to the MongoDB family for the oportunity to speak in this event
 
 *   **MUG Lisboa**: [Connect on LinkedIn](https://www.linkedin.com/company/mongodb-user-group-lisbon)
 *   **Vladyslava Prykhodko**: [Connect on LinkedIn](https://www.linkedin.com/in/vladyslava-prykhodko/)
-*   **João Moura**: [Connect on LinkedIn](https://www.linkedin.com/in/jmrmourao/)
+*   **João Mourão**: [Connect on LinkedIn](https://www.linkedin.com/in/jmrmourao/)
 
 *   **GDG Lisbon**: [Connect on LinkedIn](linkedin.com/company/gdglisbon/)
 *   **Eimy Blanco**: [Connect on LinkedIn](https://www.linkedin.com/in/eimy-blanco/)
