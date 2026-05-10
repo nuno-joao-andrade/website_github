@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Cloud-Native GCP Knowledge Base Assistant with Google ADK + Gemini + Cloud Run "
+title: "Building a Cloud-Native GCP Assistant with Google ADK + Gemini + Cloud Run to suppport Cultural Landmarks."
 description: "build a production-ready, cloud-native AI assistant designed to help people interested in Cultural Landmarks learn about ADK + Mutable Content + Gemini."
 date: 2026-05-08
 image: "/assets/img/culturallandmarks.jpg"
