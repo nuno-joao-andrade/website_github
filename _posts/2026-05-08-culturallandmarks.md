@@ -12,12 +12,11 @@ Welcome to the **Cultural Landmarks Workshop**! In this session, you will build 
 
 We will use the **Google Agent Development Kit (ADK)** and deploy the application to **Google Cloud Run**.
 
-![System Diagram](https://github.com/nuno-joao-andrade-dev/resources_gallery/blob/main/cultural-landmarks-assistant.gemini.series.png?raw=true)
+![System Diagram](https://raw.githubusercontent.com/nuno-joao-andrade-dev/resources_gallery/refs/heads/main/culturallandmarks.gemini.series.png)
 
 **Resources:**
-- **Full Article**: [Cultural Landmarks Assistant on nja.dev](https://nja.dev/posts/cultural landmarkassistant/)
-- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=cultural-landmarks-assistant.gemini.series)
-- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series.git)
+- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=culturallandmarks.gemini.series)
+- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series)
 
 ---
 
@@ -40,7 +39,7 @@ If you have the `gcloud` CLI installed, run the provided helper script from the 
 ```bash
 ./setup-gcp.sh <your-google-cloud-project-id>
 ```
-This script will automatically enable the required APIs, prompt you to log in for Vertex AI, and output the exact contents you need to paste into your `base/.env` file.
+This script will automatically enable the required APIs, prompt you to log in for Vertex AI, and output the exact contents you need into your `base/.env` file.
 
 ### Option 2: Manual Setup
 If you prefer to set this up manually:
