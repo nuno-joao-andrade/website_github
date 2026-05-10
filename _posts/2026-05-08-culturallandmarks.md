@@ -6,19 +6,18 @@ date: 2026-05-08
 image: "/assets/img/culturallandmarks.jpg"
 tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, gde, google developer expert, gcp, knowledgebase, cloud-run, mongodb, atlas,gemini, vertexai, students, university, adk, beja, mcp]
 ---
-
 # Building a Cultural Landmarks Assistant with Google ADK
 
-Welcome to the **Cultural Landmarks Workshop**! In this session, you will build a production-ready, cloud-native AI assistant designed to help people interested in Cultural Landmarks learn about ADK + Mutable Content + Gemini. 
+Welcome to the **Cultural Landmarks Workshop**! In this session, you will build a production-ready, cloud-native AI assistant designed to help people interested in Cultural Landmarks learn about Cultural Landmarks. 
 
 We will use the **Google Agent Development Kit (ADK)** and deploy the application to **Google Cloud Run**.
 
-![System Diagram](https://github.com/nuno-joao-andrade-dev/resources_gallery/blob/main/culturallandmarks.gemini.series.png?raw=true)
+![System Diagram](https://github.com/nuno-joao-andrade-dev/resources_gallery/blob/main/cultural-landmarks-assistant.gemini.series.png?raw=true)
 
 **Resources:**
-- **Full Article**: [Cultural Landmarks Assistant on nja.dev](https://nja.dev/posts/culturallandmarks/)
-- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=culturallandmarks.gemini.series)
-- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series#)
+- **Full Article**: [Cultural Landmarks Assistant on nja.dev](https://nja.dev/posts/cultural landmarkassistant/)
+- **Architecture Diagram**: [Edit in DrawIt](https://drawit.nja.dev/?gallery=cultural-landmarks-assistant.gemini.series)
+- **GitHub Repository**: [cultural-landmarks-assistant.gemini.series](https://github.com/nuno-joao-andrade-dev/cultural-landmarks-assistant.gemini.series.git)
 
 ---
 
@@ -41,7 +40,7 @@ If you have the `gcloud` CLI installed, run the provided helper script from the 
 ```bash
 ./setup-gcp.sh <your-google-cloud-project-id>
 ```
-This script will automatically enable the required APIs, prompt you to log in for Vertex AI, and output the exact contents you need into your `base/.env` file.
+This script will automatically enable the required APIs, prompt you to log in for Vertex AI, and output the exact contents you need to paste into your `base/.env` file.
 
 ### Option 2: Manual Setup
 If you prefer to set this up manually:
@@ -134,7 +133,7 @@ dotenv.config();
  * Ref: https://github.com/google/adk-docs/blob/main/docs/concepts/agents.md
  */
 const agent = new LlmAgent({
- name: 'Pax Julia',
+ name: 'PaxJulia',
  description: 'The spirit of Beja, named after its ancient Roman roots. How can I help you?',
  model: 'gemini-3.1-flash-lite-preview', // The Gemini model to use
  provider: 'vertexai', // Uses Google Cloud Vertex AI
@@ -206,29 +205,37 @@ module.exports = { agent };
 **Goal:** Give your agent access to local cultural and historical data.
 **File to modify:** `base/agents/run-agent.js`
 
-Update your `LlmAgent` configuration to include the `LocalFileToolset`. This allows the agent to read the `culturallandmarks.md` file for grounded answers.
+Update your `LlmAgent` configuration to include a `FunctionTool`. This allows the agent to read the `culturallandmarks.md` file for grounded answers.
 
 ```javascript
 /**
- * 1. Update your require statement to include LocalFileToolset and path
+ * 1. Update your require statement to include FunctionTool, z, fs, and path
  */
-const { LlmAgent, Runner, LocalFileToolset, InMemorySessionService, stringifyContent } = require('@google/adk');
+const { LlmAgent, Runner, FunctionTool, InMemorySessionService, stringifyContent } = require('@google/adk');
+const { z } = require('zod');
+const fs = require('fs');
 const path = require('path');
 
 /**
  * 2. Update your agent definition to include the tools array:
- * The LocalFileToolset allows the agent to use local files as a knowledge base.
+ * We use a FunctionTool to allow the agent to read local files as a knowledge base.
  */
 const agent = new LlmAgent({
- name: 'Pax Julia',
+ name: 'PaxJulia',
  description: 'The spirit of Beja, named after its ancient Roman roots. How can I help you?',
  model: 'gemini-3.1-flash-lite-preview',
  provider: 'vertexai', 
  instruction: 'Respond in a clear way. Use the provided landmarks file to provide detailed historical and cultural information about Beja. At the end of every response, always include a unique \"Cultural Curiosity\" section with an interesting fact from the file.',
  timeout: 300000,
  tools: [
-   new LocalFileToolset({
-     files: [path.join(__dirname, '../culturallandmarks.md')]
+   new FunctionTool({
+     name: 'read_cultural_landmarks',
+     description: 'Read the cultural landmarks file to get information about Beja.',
+     parameters: z.object({}),
+     execute: async () => {
+       const filePath = path.join(__dirname, '../culturallandmarks.md');
+       return { content: fs.readFileSync(filePath, 'utf-8') };
+     }
    })
  ]
 });
@@ -302,7 +309,7 @@ app.post('/api/chat', async (req, res) => {
  const text = stringifyContent(event);
  if (text) fullText += text;
  
- // Check if a tool (like search_documents) was called
+ // Check if a tool (like read_cultural_landmarks) was called
  if (event.toolCalls && event.toolCalls.length > 0) toolUsed = true;
  }
  }
