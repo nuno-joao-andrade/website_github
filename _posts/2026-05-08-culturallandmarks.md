@@ -10,7 +10,7 @@ tags: [cloud, google cloud, gcp, backend, development, nodejs, bun,builtwithai, 
 
 Welcome to the **Cultural Landmarks Workshop**! In this session, you will build a production-ready, cloud-native AI assistant designed to help people interested in Cultural Landmarks learn about Cultural Landmarks. 
 
-We will use the **Google Agent Development Kit (ADK)** and deploy the application to **Google Cloud Run**.
+We will use the **Google Agent Development Kit (ADK)** and deploy the application to **Google Cloud Run**..
 
 ![System Diagram](https://raw.githubusercontent.com/nuno-joao-andrade-dev/resources_gallery/refs/heads/main/culturallandmarks.gemini.series.png)
 
