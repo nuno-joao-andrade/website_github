@@ -99,7 +99,7 @@ The workshop repository is structured into six self-contained, progressively com
 
 | Step | Milestone | Tech Stack & Capabilities | Automated Tests |
 | :---: | :--- | :--- | :---: |
-| **01** | **Setup & Local LLM** | Ollama daemon, Gemma 4 / Gemma 2 via `OLLAMA_MODEL`, Node.js client | 5 tests |
+| **01** | **Setup & Local LLM** | Ollama daemon, Gemma 4 via `OLLAMA_MODEL`, Node.js client | 5 tests |
 | **02** | **Dual-Layer RAG Engine** | In-memory BM25, Polish diacritics, markdown chunking, `mtime` hot-reload | 9 tests |
 | **03** | **Native Tool Binding** | JSON Schema declarations, Hejnał time math, Wawel ticket simulator | 7 tests |
 | **04** | **Google ADK Orchestration** | `@google/adk`, `BaseLlm`, `FunctionTool`, `InMemoryRunner` tool loops | 23 tests |
