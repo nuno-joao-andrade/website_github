@@ -1,5 +1,5 @@
 ---
-title: "Engenharia de Software AI-First & Arquitetura de Contexto: Masterclass Google Antigravity CLI (agy)"
+title: "Build It with AI: A Hands-On Code-Along com Antigravity CLI (agy)"
 date: 2026-10-23 10:00:00 +0100
 categories: [AI Engineering, Workshops]
 tags: [antigravity-cli, agy, gemini, mcp, context-engineering, skills, hooks, plugins, nodejs, react, python, gdg-lisbon]
@@ -10,7 +10,7 @@ image:
   alt: "Engenharia de Software AI-First com Google Antigravity CLI (agy) — Masterclass Code-Along GDG Lisbon"
 ---
 
-# Engenharia de Software AI-First & Arquitetura de Contexto: Masterclass Google Antigravity CLI (`agy`)
+# Build It with AI: A Hands-On Code-Along com Antigravity CLI (agy)
 
 > **Repositório Code-Along do Workshop**: [https://github.com/nuno-joao-andrade-dev/builditwithai-techparkcv](https://github.com/nuno-joao-andrade-dev/builditwithai-techparkcv)
 >
