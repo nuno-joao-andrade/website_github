@@ -2,12 +2,12 @@
 title: "AI Exam Prep with Google ADK & Local Gemma 4: Hands-On JavaScript Code-Along (IADE & GDG Lisbon)"
 date: 2026-10-26 10:00:00 +0100
 categories: [AI Engineering, Workshops]
-tags: [google-adk, gemma4, ollama, javascript, nodejs, react, rag, socratic-agent, structured-outputs, zod, gdg-lisbon, iade]
+tags: [google-adk, gemma4, ollama, javascript, nodejs, react, openapi, swagger, rag, socratic-agent, structured-outputs, zod, gdg-lisbon, iade]
 author: Nuno João Andrade
-description: "A complete, code-first JavaScript (ES Modules) workshop and architectural guide on building a 100% offline AI Exam Prep platform with Google ADK (@google/adk), local Gemma 4 (gemma4:e2b via Ollama), area-parameterized Markdown RAG (data/[area]/[content files]), Socratic mentoring with ADK Web UI, deterministic rubric grading, and a React Markdown-First interface."
+description: "A complete, code-first JavaScript (ES Modules) workshop and architectural guide on building a 100% offline AI Exam Prep platform with Google ADK (@google/adk), local Gemma 4 (gemma4:e2b via Ollama), area-parameterized Markdown RAG (data/[area]/[content files]), Socratic mentoring with ADK Web UI, deterministic rubric grading with OpenAPI 3.0.3 (Swagger) on the API root, and an optional IADE-inspired React Student Web Interface (step-06-web-ui)."
 image:
   path: /assets/ai-exam-prep/slide-01.png
-  alt: "AI Exam Prep in Plain JavaScript — Step-by-Step Code Walkthrough with Google ADK, Local Gemma 4 & React (GDG Lisbon & IADE)"
+  alt: "AI Exam Prep in Plain JavaScript — Step-by-Step Code Walkthrough with Google ADK, Local Gemma 4, OpenAPI 3.0 & IADE-Inspired React Web UI (GDG Lisbon & IADE)"
 ---
 
 # AI Exam Prep with Google ADK & Local Gemma 4: Hands-On JavaScript Code-Along
@@ -21,25 +21,26 @@ image:
 > npm install
 > ```
 
-> **Special Thanks**: A special thank you to **IADE**, **[Lurdes Ferraz](https://www.linkedin.com/in/lurdes-ferraz-0061923a9/)**, **[Nathan Campos](https://www.linkedin.com/in/nathanpc/)**, **[GDG Lisbon](https://gdg.community.dev/gdg-lisbon/)**, and **[Eimy Blanco](https://www.linkedin.com/in/eimy-blanco/)** for the invitation, organization, and support in making this hands-on session possible!
+> **Special Thanks**: A special thank you to **[IADE](https://www.iade.europeia.pt/)**, **[Lurdes Ferraz](https://www.linkedin.com/in/lurdes-ferraz-0061923a9/)**, **[Nathan Campos](https://www.linkedin.com/in/nathanpc/)**, **[GDG Lisbon](https://gdg.community.dev/gdg-lisbon/)**, and **[Eimy Blanco](https://www.linkedin.com/in/eimy-blanco/)** for the invitation, organization, and support in making this hands-on session possible!
 
-Welcome to the complete technical walkthrough of the **AI Exam Prep in Plain JavaScript — Step-by-Step Code-Along Workshop**, presented with **IADE** and **GDG Lisbon**. In this practical engineering session, we build a complete, **100% local and offline AI Exam Preparation & Socratic Study System** from the ground up using **Plain JavaScript (ES Modules, Node.js 22+)**, the **Google Agent Development Kit (`@google/adk`)**, **Local Gemma 4 (`gemma4:e2b`)** running via **Ollama**, and a **React + Vite Web Interface** (`question-interface`).
+Welcome to the complete technical walkthrough of the **AI Exam Prep in Plain JavaScript — Step-by-Step Code-Along Workshop**, presented with **IADE** and **GDG Lisbon**. In this practical engineering session, we build a complete, **100% local and offline AI Exam Preparation & Socratic Study System** from the ground up using **Plain JavaScript (ES Modules, Node.js 22+)**, the **Google Agent Development Kit (`@google/adk`)**, **Local Gemma 4 (`gemma4:e2b`)** running via **Ollama**, an **Express API with interactive OpenAPI 3.0.3 (Swagger) documentation on its root endpoint (`step-05-grading-complete`)**, and an optional **IADE-inspired React + Vite Student Web Interface (`step-06-web-ui`)**.
 
-Instead of relying on opaque cloud wrappers, complex TypeScript compilation pipelines, or external vector database containers, this workshop demonstrates how to structure a clean, modular 5-step agentic pipeline where study materials live in **`data/[area]/[content files]`** and any subject area (`javascript`, `ai-agents`, `cloud`, or your own custom Markdown notes) can be passed dynamically as a CLI argument or URL parameter.
+Instead of relying on opaque cloud wrappers, complex TypeScript compilation pipelines, or external vector database containers, this workshop demonstrates how to structure a clean, modular agentic pipeline where study materials live in **`data/[area]/[content files]`** and any subject area (`javascript`, `ai-agents`, `cloud`, or your own custom Markdown notes) can be passed dynamically as a CLI argument, REST payload, or URL parameter.
 
 ![Slide 01 — Simple JavaScript Folder Layout & data/[area]/[content files]](/assets/ai-exam-prep/slide-01.png)
 
 > [!NOTE]
-> **Primary Architectural Goal**: Empower developers and students to build a privacy-first, zero-API-cost agentic study companion that grounds every exam question, Socratic hint, and rubric evaluation strictly in local Markdown study notes (`data/[area]/*.md`), while supporting both interactive CLI execution, the **Google ADK DevTools Web UI (`adk web`)**, and a full-stack **React Markdown Preview** web interface.
+> **Primary Architectural Goal**: Empower developers and students to build a privacy-first, zero-API-cost agentic study companion that grounds every exam question, Socratic hint, and rubric evaluation strictly in local Markdown study notes (`data/[area]/*.md`), while supporting interactive CLI execution, the **Google ADK DevTools Web UI (`adk web`)**, an **OpenAPI 3.0.3 (Swagger) Explorer** on `http://localhost:3000/`, and an **IADE-inspired React Student Portal** (`step-06-web-ui`) on `http://localhost:5173/`.
 
 ---
 
 ## About the Speaker & the GDG Lisbon + IADE Session
 
-This workshop was created for the **IADE** academic and developer community in partnership with **Google Developer Groups (GDG) Lisbon** by **Nuno João Andrade** ([nja.dev](https://nja.dev)), **Google Developer Expert (GDE)** in Google Cloud & Modern Infrastructure and Senior Backend & Cloud Architect.
+This workshop was created for the **[IADE — Faculdade de Design, Tecnologia e Comunicação](https://www.iade.europeia.pt/)** academic and developer community in partnership with **Google Developer Groups (GDG) Lisbon** by **Nuno João Andrade** ([nja.dev](https://nja.dev)), **Google Developer Expert (GDE)** in Google Cloud & Modern Infrastructure and Senior Backend & Cloud Architect.
 
-- **Plain JavaScript by Design**: Every step (`step-01-setup` through `step-05-grading-complete`) is written in native **Node.js ES Modules (`.js`)** using built-in `fetch()`—zero TypeScript build steps, zero external HTTP client bloat, and instant execution inside each folder (`cd step-0X-... && npm start <area>`).
-- **Dynamic Content Parameterization (`data/[area]/[content files]`)**: Drop any `.md` or `.txt` files into `data/<area>/` and pass `<area>` as a parameter in the terminal (`node index.js javascript`, `node index.js ai-agents`, `node index.js cloud`) or in the React Web UI (`?area=javascript` or via the **+ Pass Custom Content Parameter** drawer).
+- **Plain JavaScript by Design**: Every core step (`step-01-setup` through `step-05-grading-complete`) is written in native **Node.js ES Modules (`.js`)** using built-in `fetch()`—zero TypeScript build steps, zero external HTTP client bloat, and instant execution inside each folder (`cd step-0X-... && npm start <area>`).
+- **Dynamic Content Parameterization (`data/[area]/[content files]`)**: Drop any `.md` or `.txt` files into `data/<area>/` and pass `<area>` as a parameter in the terminal (`node index.js javascript`, `node index.js ai-agents`, `node index.js cloud`) or in the Step 06 React Web UI (`?area=javascript` or via the **+ Pass Custom Content Parameter** drawer).
+- **OpenAPI-First Backend + IADE-Inspired Frontend**: Step 05 serves a full **OpenAPI 3.0.3 (Swagger)** specification and interactive Swagger UI directly at the API root (`GET http://localhost:3000/`), which **Step 06 (Optional)** consumes from a React interface styled after the official **IADE** digital identity (`#000000` black header, `#3cdbc0` turquoise, `#f000ff` magenta, `#0047bb` royal blue, and `Lato` typography).
 
 ---
 
@@ -53,13 +54,15 @@ When students or engineering teams use generic cloud chatbots to study for techn
 | **Exam Structure** | Unstructured prose questions with arbitrary point values | Deterministic **20-point JSON Schema** (`EXAM_JSON_SCHEMA`) validated at runtime with **Zod** |
 | **Learning Pedagogy** | Spoils the full solution immediately when asked for help | **Socratic Study Mentor Agent** (`step-04-socratic-agent`) gives a 2–4 sentence hint + **one guiding question** |
 | **Answer Grading** | Vague "Good job!" feedback without criterion-level breakdown | **Deterministic Rubric Grader** (`step-05-grading-complete`) scoring each criterion against `data/[area]/` notes |
+| **API Discoverability** | Undocumented custom endpoints | **OpenAPI 3.0.3 (Swagger)** served on `GET /`, `/openapi.json`, and `/swagger.json` (`http://localhost:3000/`) |
+| **Student Experience** | Raw terminal or generic chat window | **Step 06 (Optional): IADE-Inspired React Web UI** (`step-06-web-ui`) with area cards, live question generation, Socratic chat, and rubric scorecards |
 | **Cost & Privacy** | Requires paid API keys and sends study notes to external servers | **100% Offline & Free**: runs locally on `gemma4:e2b` via Ollama (`127.0.0.1:11434`) |
 
 ---
 
-## System Architecture Blueprint & Progressive 5-Step Curriculum
+## System Architecture Blueprint & Progressive Curriculum (`step-01` to `step-06`)
 
-The repository is organized into shared foundation helpers (`src/shared/`), five progressive self-contained step folders (`step-01-setup` to `step-05-grading-complete`), and a full-stack React web interface (`question-interface/`):
+The repository is organized into shared foundation helpers (`src/shared/`), five progressive self-contained backend/agent step folders (`step-01-setup` to `step-05-grading-complete`), and an optional **Step 06** IADE-inspired React web interface (`step-06-web-ui/`):
 
 ```text
 examprep/
@@ -80,11 +83,11 @@ examprep/
 ├── step-02-rag/                  # Step 2: ADK FunctionTool over data/[area]/
 ├── step-03-exam-gen/             # Step 3: Structured 20-pt JSON exam + rubric generator
 ├── step-04-socratic-agent/       # Step 4: Multi-turn Socratic Mentor + `adk web` UI
-├── step-05-grading-complete/     # Step 5: Deterministic rubric grader + Express API (:3000)
-└── question-interface/           # React + Vite Web UI (:5173) with Markdown Preview boxes
+├── step-05-grading-complete/     # Step 5: Rubric grader + Express API + OpenAPI/Swagger on `/` (:3000)
+└── step-06-web-ui/               # Step 6 (Optional): IADE-inspired React Student Web UI (:5173 -> :3000)
 ```
 
-### The 5-Step Workshop Roadmap
+### The Workshop Roadmap (Steps 01–05 + Optional Step 06)
 
 | Step Folder | Architectural Focus | Key Primitives Demonstrated | Execution Command |
 | :--- | :--- | :--- | :--- |
@@ -92,7 +95,8 @@ examprep/
 | **`step-02-rag/`** | Area Content RAG Tool | `FunctionTool` (`search_area_content`), Zod tool parameters, heading-aware Markdown chunking | `cd step-02-rag && npm start javascript` |
 | **`step-03-exam-gen/`** | Structured 20-Point Exam & Rubric Generator | Ollama JSON Schema (`format: EXAM_JSON_SCHEMA`), `ExamQuestionSchema` Zod validation | `cd step-03-exam-gen && npm start javascript` |
 | **`step-04-socratic-agent/`** | Multi-Turn Socratic Mentor & ADK DevTools Web UI | Multi-turn `InMemoryRunner`, Socratic system rules, `export const rootAgent`, `adk web` (`:8000`) | `cd step-04-socratic-agent && npm start javascript` (or `npm run web`) |
-| **`step-05-grading-complete/`** | Deterministic Rubric Grader & Full-Stack Express API | Criterion-by-criterion JSON grading (`EVALUATION_JSON_SCHEMA`), REST API (`server.js` on `:3000`) | `cd step-05-grading-complete && npm start javascript` |
+| **`step-05-grading-complete/`** | Deterministic Rubric Grader, Express API & OpenAPI (Swagger) Root | Criterion-by-criterion JSON grading (`EVALUATION_JSON_SCHEMA`), REST API + OpenAPI 3.0.3 UI on `GET /` (`:3000`) | `cd step-05-grading-complete && npm start javascript` (or `npm run server`) |
+| **`step-06-web-ui/` *(Optional)*** | IADE-Inspired React Student Web Interface | Area selector hero (`javascript`, `ai-agents`, `cloud`), live question generation via Step 05 API, Socratic Coach, Markdown Preview boxes | `cd step-06-web-ui && npm start` (or `npm run step06`) |
 
 ---
 
@@ -123,7 +127,7 @@ curl http://127.0.0.1:11434/api/tags
 
 ![Slide 03 — Pull Local gemma4:e2b & Install Workspace Dependencies](/assets/ai-exam-prep/slide-03.png)
 
-Pull the local Gemma 4 model (`gemma4:e2b`) once for offline inference, then run `npm install` at the repository root to link all 5 step workspaces and `question-interface`:
+Pull the local Gemma 4 model (`gemma4:e2b`) once for offline inference, then run `npm install` at the repository root to link all step workspaces (`step-01-setup` through `step-06-web-ui`):
 
 ```bash
 # 1. Download local Gemma 4 model
@@ -141,7 +145,7 @@ npm install
 > [!TIP]
 > **Classroom Offline USB Model Installation (`OLLAMAMODEL`)**: In a live classroom where 30+ participants shouldn't download 4.6 GB over venue Wi-Fi simultaneously, the repository includes **[OFFLINE-MODEL-SETUP.md](https://github.com/nuno-joao-andrade-dev/ai-exam-prep/blob/main/OFFLINE-MODEL-SETUP.md)** with ready-to-run commands for copying the `models/` folder (`blobs/`, `manifests/`, `manifests-v2/`, `metadata/`) directly from the `OLLAMAMODEL` USB drive on **Windows (PowerShell)**, **macOS**, and **Linux** with zero internet usage.
 
-The root `package.json` provides clean scripts for running individual steps, launching the **Google ADK DevTools Web UI** (`step04:web`), or starting the **Express API + React Web UI + Slide Deck** simultaneously with `concurrently`:
+The root `package.json` provides clean scripts for running individual steps, launching the **Google ADK DevTools Web UI** (`step04:web`), starting the **Step 05 OpenAPI Server** (`server`), or launching **Step 06 (Optional) IADE React Web UI** (`step06`):
 
 ```json
 {
@@ -153,9 +157,10 @@ The root `package.json` provides clean scripts for running individual steps, lau
     "step04": "node step-04-socratic-agent/index.js",
     "step04:web": "adk web step-04-socratic-agent/index.js --compile false --bundle false",
     "step05": "node step-05-grading-complete/index.js",
+    "step06": "node step-06-web-ui/index.js",
     "server": "node step-05-grading-complete/server.js",
-    "ui": "npm --prefix question-interface run dev",
-    "ui:build": "npm --prefix question-interface run build",
+    "ui": "npm --prefix step-06-web-ui run dev",
+    "ui:build": "npm --prefix step-06-web-ui run build",
     "slides": "node src/shared/serve-slides.js",
     "test:all": "node src/shared/test-all.js"
   }
@@ -381,7 +386,7 @@ npm run step04:web
 
 ---
 
-### Step 05: Deterministic Rubric Grader & Express API Server (`step-05-grading-complete/`)
+### Step 05: Deterministic Rubric Grader, Express API & OpenAPI 3.0.3 (Swagger) on Root (`step-05-grading-complete/`)
 
 ![Slide 12 — Execute Step 05: cd step-05-grading-complete && node index.js <area>](/assets/ai-exam-prep/slide-12.png)
 
@@ -396,56 +401,107 @@ npm start javascript
 npm run step05 -- javascript
 ```
 
-![Slide 13 — Backend API Server: step-05-grading-complete/server.js](/assets/ai-exam-prep/slide-13.png)
+#### OpenAPI 3.0.3 (Swagger) Documentation on the Root Endpoint (`GET /`)
 
-`step-05-grading-complete/server.js` exposes the complete pipeline over HTTP (`http://localhost:3000`) for the React Web Interface. Every endpoint accepts both `area` (folder name inside `data/`) and optional `customContent` (raw Markdown passed from the UI):
-- `GET /api/status?area=<area>`: Lists all available `data/[area]` folders, loaded files, and Ollama connectivity status.
-- `POST /api/rag/search`: Runs `searchAreaContent({ area, query, topK, customContent })`.
-- `POST /api/exam/generate`: Generates a 20-point exam question and rubric for `area` + `topic`.
-- `POST /api/socratic/chat`: Multi-turn Socratic mentor chat grounded in `data/[area]/`.
-- `POST /api/grade/evaluate`: Evaluates the student's Markdown answer against the 20-point rubric.
+![Slide 13 — Backend API Server & OpenAPI (Swagger) on Root: step-05-grading-complete/server.js](/assets/ai-exam-prep/slide-13.png)
+
+In addition to the CLI grader, `step-05-grading-complete/server.js` exposes the entire exam preparation pipeline over HTTP (`http://localhost:3000`) and dynamically generates an **OpenAPI 3.0.3 (Swagger)** description directly on the root endpoint (`GET /`), dynamically enumerating every folder discovered inside `data/` (`listAreas()`):
+
+```javascript
+// step-05-grading-complete/server.js
+app.get(['/openapi.json', '/swagger.json'], (req, res) => {
+  const serverUrl = `${req.protocol}://${req.get('host')}`;
+  res.json(buildOpenApiSpec(serverUrl));
+});
+
+app.get('/', (req, res) => {
+  const serverUrl = `${req.protocol}://${req.get('host')}`;
+  const spec = buildOpenApiSpec(serverUrl);
+  const accept = req.headers.accept || '';
+  if (req.query.format === 'json' || accept.includes('application/json')) {
+    return res.json(spec);
+  }
+  return res.type('html').send(renderSwaggerUiHtml(spec));
+});
+```
+
+![Step 05 OpenAPI 3.0.3 (Swagger) Interactive Explorer on http://localhost:3000/](/assets/ai-exam-prep/step-05-openapi.png)
+
+When you start the server (`npm run server` or `cd step-05-grading-complete && npm run server`):
+- **`GET http://localhost:3000/`**: Renders the interactive **Swagger UI** in the browser (or returns the raw OpenAPI 3.0.3 JSON when requested with `Accept: application/json` or `?format=json`).
+- **`GET http://localhost:3000/openapi.json`** (and **`/swagger.json`**): Returns the raw OpenAPI 3.0.3 JSON specification with full request/response schemas for `ExamQuestion`, `RubricCriterion`, `EvaluationResult`, and `RagSearchResponse`.
+- **`GET /api/status?area=<area>`**: Lists all available `data/[area]` folders, loaded Markdown files, and local Ollama connectivity status.
+- **`POST /api/rag/search`**: Runs `searchAreaContent({ area, query, topK, customContent })`.
+- **`POST /api/exam/generate`**: Generates a 20-point exam question and rubric for `area` + `topic`.
+- **`POST /api/socratic/chat`**: Multi-turn Socratic mentor chat grounded in `data/[area]/`.
+- **`POST /api/grade/evaluate`**: Evaluates the student's Markdown answer against the 20-point rubric.
 
 ---
 
-## Full-Stack React Web Interface (`question-interface/`)
+## Step 06 (Optional): IADE-Inspired React Student Web Interface (`step-06-web-ui/`)
 
-### 1. Passing `area` and `customContent` as Parameters
+To give students an intuitive, self-service web experience on top of the Step 05 API, **Step 06 (Optional)** (`step-06-web-ui/`) provides a modern **React + Vite Student Web Interface** inspired by the official **[IADE — Faculdade de Design, Tecnologia e Comunicação](https://www.iade.europeia.pt/)** website.
 
-![Slide 14 — Passing Content as a Parameter in question-interface/src/App.jsx](/assets/ai-exam-prep/slide-14.png)
+![Step 06 (Optional) — IADE-Inspired React Student Web Interface on http://localhost:5173/](/assets/ai-exam-prep/step-06-iade-ui.png)
 
-In `question-interface/src/App.jsx`, you can switch study areas or pass custom study notes in three ways:
-1. **URL Query Parameter (`?area=javascript`, `?area=ai-agents`, `?area=cloud`)**: Automatically synced with `window.history.replaceState`.
-2. **Header Area Selector Dropdown**: Switches between any folder discovered inside `data/`.
-3. **`+ Pass Custom Content Parameter` Drawer (or `?content=...`)**: Paste any custom Markdown lecture notes directly in the browser to override `data/[area]/` on the fly for RAG search, exam generation, Socratic mentoring, and rubric grading.
+### 1. Visual Design System Inspired by IADE (`step-06-web-ui/src/index.css`)
 
-### 2. Markdown Preview Boxes (`<MarkdownPreview />` & `<MarkdownBox />`)
+The frontend adopts IADE's bold editorial design language and exact color tokens:
+- **Brand Palette**: `--brand1: #000000` (Bold Black top navigation bar & primary buttons), `--brand2: #3cdbc0` (IADE Turquoise accents, active pill borders, and highlights), `--brand3: #0047bb` (IADE Royal Blue badges), `--brand4: #f000ff` (IADE Magenta micro-accents), and `--ui02: #eeeff2` (light editorial surface).
+- **Typography & Header**: Clean `Lato` typography paired with the official inline **IADE SVG emblem** (`IadeLogoSvg` in `Header.jsx`), a quick-switch area pill bar (`javascript`, `ai-agents`, `cloud`), and a direct link to the **Step 05 OpenAPI / Swagger UI (`http://localhost:3000/`)**.
 
-![Slide 15 — Markdown Preview Boxes: question-interface/src/components/MarkdownPreview.jsx](/assets/ai-exam-prep/slide-15.png)
+### 2. Student Area Selection & Live Question Generation via Step 05 API
 
-To make technical scenarios, code snippets, rubrics, and student answers effortless to read, most boxes in the React UI render formatted Markdown previews by default:
-- Read-only displays (exam scenario, question prompt, rubric criteria, sample solution, Socratic mentor replies, and RAG source excerpts) use `<MarkdownPreview />`.
-- Interactive inputs (student answer box, Socratic chat input, and custom content parameter editor) use `<MarkdownBox defaultMode="preview" />` with instant **`Markdown Preview | Split | Edit MD`** mode tabs.
+![Slide 14 — Step 06 (Optional): IADE-Inspired React Student Web UI (step-06-web-ui/)](/assets/ai-exam-prep/slide-14.png)
+
+In `step-06-web-ui/src/App.jsx` and `AreaSelectorHero.jsx`, students can:
+1. **Select Any Study Area (`data/[area]/`)**: Click on any area card (`javascript`, `ai-agents`, `cloud`, or any custom folder added to `data/`) in the dark IADE Hero banner, use the header pills, or pass `?area=javascript` in the URL.
+2. **Generate Exam Questions via the Step 05 API (`POST /api/exam/generate`)**: Enter an optional topic focus (e.g., `"Event Loop and Closures"` or `"Horizontal Scaling and Cache Stampede"`) and click **`Generate Question via Step 05 API`** (or click **`Generate Question via API →`** directly on any area card) to generate a fresh 20-point exam question from `data/[area]/`.
+3. **Pass Custom Markdown Notes (`+ Custom Notes` Drawer)**: Paste custom lecture notes directly in the browser to override `data/[area]/` on the fly across all four Step 05 API endpoints.
+
+### 3. Answering Questions, Socratic Coaching & Deterministic Grading (`<MarkdownBox />`)
+
+![Slide 15 — Step 06 (Optional): Area Selector Hero & MarkdownBox Components](/assets/ai-exam-prep/slide-15.png)
+
+Once an area and question are active, students progress through four integrated tabs in the workspace:
+- **`1. Answer Exam Question` (`ExamQuestionView.jsx`)**: Displays the 20-point scenario, question prompt, and collapsible grading rubric using `<MarkdownPreview />`, alongside an interactive `<MarkdownBox />` (`Markdown Preview | Split | Edit MD`) where the student writes their solution and clicks **`Submit & Grade via Step 05 API`** (`POST /api/grade/evaluate`).
+- **`2. Socratic Coach (Step 04)` (`SocraticChatView.jsx`)**: Connects to `POST /api/socratic/chat` so students can ask for a hint while working on the question—receiving a 2–4 sentence conceptual nudge and one guiding question grounded in `data/[area]/` without spoiling the answer.
+- **`3. Rubric Evaluation (Step 05)` (`RubricScorecardView.jsx`)**: Renders the per-criterion point breakdown (`awardedPoints / maxPoints`), justifications, and actionable improvement suggestions returned by the Step 05 rubric grader.
+- **`4. Study Notes (data/area)` (`CurriculumSearchView.jsx`)**: Lets students search the Markdown chunks in `data/[area]/` via `POST /api/rag/search`.
+
+```bash
+# Launch Step 06 (automatically starts the Step 05 API on :3000 if not already running, plus Vite on :5173):
+cd step-06-web-ui
+npm start
+
+# Or from the repository root:
+npm run step06
+```
 
 ---
 
 ## Running Everything End-to-End
 
-![Slide 16 — Running Every Step & Launching the React Web Interface](/assets/ai-exam-prep/slide-16.png)
+![Slide 16 — Running Steps 01–05 & Step 06 (Optional React Web UI)](/assets/ai-exam-prep/slide-16.png)
 
-Use `npm run dev` at the repository root to launch the **Express API Server (`:3000`)**, **React Vite Web UI (`:5173`)**, and **GDG Lisbon Slide Deck (`:3030`)** concurrently:
+Use `npm run dev` at the repository root to launch the **Step 05 Express + OpenAPI Server (`:3000`)**, **Step 06 IADE React Web UI (`:5173`)**, and **GDG Lisbon Slide Deck (`:3030`)** concurrently—or use `npm run step06` to launch the Step 05 API + Step 06 React UI together:
 
 ```bash
-# Run API Server (:3000) + React Web UI (:5173) + Slide Deck (:3030) together:
+# Option A: Launch Step 06 IADE React Web UI (:5173) + Step 05 API Server (:3000):
+npm run step06
+
+# Option B: Run API Server (:3000) + Step 06 React Web UI (:5173) + Slide Deck (:3030) together:
 npm run dev
 
-# Or run all 5 steps in automated demo mode to verify your setup:
+# Option C: Run all 5 core steps in automated demo mode to verify your setup:
 npm run test:all -- javascript
 ```
 
 Open your browser at:
-- **React Exam Prep Web UI**: `http://localhost:5173/?area=javascript` (or `?area=ai-agents`, `?area=cloud`)
+- **Step 06 IADE-Inspired React Student Web UI**: `http://localhost:5173/?area=javascript` (or `?area=ai-agents`, `?area=cloud`)
+- **Step 05 OpenAPI 3.0.3 (Swagger) Root UI**: `http://localhost:3000/` (JSON spec at `http://localhost:3000/openapi.json`)
 - **Interactive Slide Deck**: `http://localhost:3030`
-- **Google ADK DevTools Web UI (Step 4)**: `npm run step04:web` &rarr; `http://localhost:8000`
+- **Google ADK DevTools Web UI (Step 04)**: `npm run step04:web` &rarr; `http://localhost:8000`
 
 ---
 
@@ -457,6 +513,7 @@ Open your browser at:
 | `model "gemma4:e2b" not found` | Model has not been pulled or copied into Ollama's `models/` directory | Run `ollama pull gemma4:e2b` or copy `models/` from the `OLLAMAMODEL` USB drive (`OFFLINE-MODEL-SETUP.md`). |
 | `Unknown area "<name>"` | Folder `data/<name>` does not exist | Check available folders in `data/` (`javascript`, `ai-agents`, `cloud`) or create `data/<name>/notes.md`. |
 | `No rootAgent found` when running `adk web` | Running `adk web` without disabling TypeScript bundling on an ESM `.js` file | Use `npm run web` (inside `step-04-socratic-agent`) or `npm run step04:web` (which passes `--compile false --bundle false`). |
+| Step 06 UI shows `Step 05 API Offline` badge | `step-05-grading-complete/server.js` is not running on port `3000` | Run `npm run step06` (which auto-starts Step 05 API) or `npm run server` in another terminal. |
 
 ---
 
@@ -465,12 +522,13 @@ Open your browser at:
 1. **Plain JavaScript + `@google/adk` Keeps Agentic Code Accessible**: Extending `BaseLlm` with 60 lines of native `fetch()` code (`src/shared/ollama-llm.js`) connects Google ADK's `LlmAgent`, `FunctionTool`, `InMemoryRunner`, and `adk web` directly to local Ollama models with zero cloud dependencies.
 2. **Convention Over Configuration (`data/[area]/[content files]`)**: Organizing study notes into `data/[area]/*.md` and splitting on `## ` headings turns any folder of Markdown notes into a searchable knowledge base (`search_area_content`) without vector database infrastructure.
 3. **Structured Schemas + Socratic Guardrails Transform Pedagogy**: Combining Ollama's JSON Schema enforcement (`format`) with Zod validation guarantees deterministic 20-point exams and rubric scores, while Socratic system instructions ensure the agent mentors students instead of spoiling answers.
+4. **Self-Documenting OpenAPI Root + Modular Frontend (`step-05` & `step-06`)**: Serving an OpenAPI 3.0.3 (Swagger) UI directly on `GET /` (`http://localhost:3000/`) makes the backend immediately testable on its own and trivial to consume from the optional IADE-inspired React student portal (`step-06-web-ui/`).
 
 ---
 
 ### Special Thanks
 
-- **IADE — Faculdade de Design, Tecnologia e Comunicação**
+- **[IADE — Faculdade de Design, Tecnologia e Comunicação](https://www.iade.europeia.pt/)**
 - **[Lurdes Ferraz](https://www.linkedin.com/in/lurdes-ferraz-0061923a9/)**
 - **[Nathan Campos](https://www.linkedin.com/in/nathanpc/)**
 - **[GDG Lisbon (Google Developer Group Lisbon)](https://gdg.community.dev/gdg-lisbon/)**
