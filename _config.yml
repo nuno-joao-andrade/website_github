@@ -25,6 +25,7 @@ author:
   linkedin: nuno-andrade-964b2416
 
 # Build Settings
+future: true
 markdown: kramdown
 highlighter: rouge
 permalink: /posts/:title/

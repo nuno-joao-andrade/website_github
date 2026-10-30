@@ -1,0 +1,177 @@
+<!-- Upcoming / Scheduled Posts URL Parameter Filter -->
+<style>
+  .upcoming-post-hidden {
+    display: none !important;
+  }
+  .upcoming-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15em 0.55em;
+    border-radius: 0.35rem;
+    background-color: #f59e0b;
+    color: #111827;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+</style>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var activeParamKey = null;
+    var activeParamVal = null;
+
+    ['upcoming', 'preview', 'future'].forEach(function (key) {
+      if (!activeParamKey && params.has(key)) {
+        var val = (params.get(key) || '').toLowerCase();
+        if (val !== 'false' && val !== '0' && val !== 'no') {
+          activeParamKey = key;
+          activeParamVal = params.get(key) || 'true';
+        }
+      }
+    });
+
+    var showUpcoming = Boolean(activeParamKey);
+    var nowSec = Math.floor(Date.now() / 1000);
+
+    function getItemTimestamp(el) {
+      var directTs = el.getAttribute('data-ts');
+      if (directTs) return parseInt(directTs, 10);
+      var timeEl = el.querySelector('[data-ts]');
+      if (timeEl) return parseInt(timeEl.getAttribute('data-ts'), 10);
+      return NaN;
+    }
+
+    function addUpcomingBadge(container) {
+      if (container.querySelector('.upcoming-badge')) return;
+      var timeEl = container.querySelector('time[data-ts], span.date.month[data-ts]');
+      if (timeEl && timeEl.parentNode) {
+        var badge = document.createElement('span');
+        badge.className = 'upcoming-badge';
+        badge.textContent = 'Upcoming';
+        timeEl.insertAdjacentElement('afterend', badge);
+      }
+    }
+
+    function processUpcomingPosts() {
+      nowSec = Math.floor(Date.now() / 1000);
+
+      // 1. Home page cards, Archive items, Category/Tag items, Related posts
+      var selectors = [
+        '#post-list > article.card-wrapper',
+        '#archives li',
+        '#page-category ul.content > li',
+        '#page-tag ul.content > li',
+        '#related-posts article.col'
+      ];
+
+      document.querySelectorAll(selectors.join(', ')).forEach(function (item) {
+        var ts = getItemTimestamp(item);
+        if (!isNaN(ts) && ts > nowSec) {
+          if (showUpcoming) {
+            item.classList.remove('upcoming-post-hidden');
+            addUpcomingBadge(item);
+          } else {
+            item.classList.add('upcoming-post-hidden');
+          }
+        }
+      });
+
+      // 2. Recently Updated sidebar (#access-lastmod) — keep max 5 visible items
+      var lastmodItems = document.querySelectorAll('#access-lastmod ul.content > li');
+      if (lastmodItems.length > 0) {
+        var visibleCount = 0;
+        lastmodItems.forEach(function (li) {
+          var ts = getItemTimestamp(li);
+          var isFuture = !isNaN(ts) && ts > nowSec;
+          if ((isFuture && !showUpcoming) || visibleCount >= 5) {
+            li.classList.add('upcoming-post-hidden');
+          } else {
+            li.classList.remove('upcoming-post-hidden');
+            visibleCount++;
+          }
+        });
+      }
+
+      // 3. Post page header badge + Previous/Next navigation buttons
+      var postHeaderMeta = document.querySelector('article header .post-meta');
+      if (postHeaderMeta) {
+        var headerTime = postHeaderMeta.querySelector('time[data-ts]');
+        if (headerTime) {
+          var postTs = parseInt(headerTime.getAttribute('data-ts'), 10);
+          if (!isNaN(postTs) && postTs > nowSec) {
+            addUpcomingBadge(postHeaderMeta);
+          }
+        }
+      }
+
+      document.querySelectorAll('.post-navigation a[data-ts]').forEach(function (navLink) {
+        var ts = parseInt(navLink.getAttribute('data-ts'), 10);
+        if (!isNaN(ts) && ts > nowSec && !showUpcoming) {
+          var disabledDiv = document.createElement('div');
+          disabledDiv.className = 'btn btn-outline-primary disabled';
+          disabledDiv.setAttribute('aria-label', navLink.getAttribute('aria-label') || '');
+          disabledDiv.innerHTML = '<p>-</p>';
+          navLink.replaceWith(disabledDiv);
+        }
+      });
+
+      // 4. Hide empty year groups in Archives
+      document.querySelectorAll('#archives ul.list-unstyled').forEach(function (ul) {
+        var visibleLis = ul.querySelectorAll('li:not(.upcoming-post-hidden)');
+        var yearHeader = ul.previousElementSibling;
+        if (visibleLis.length === 0) {
+          ul.classList.add('upcoming-post-hidden');
+          if (yearHeader && yearHeader.classList.contains('year')) {
+            yearHeader.classList.add('upcoming-post-hidden');
+          }
+        } else {
+          ul.classList.remove('upcoming-post-hidden');
+          if (yearHeader && yearHeader.classList.contains('year')) {
+            yearHeader.classList.remove('upcoming-post-hidden');
+          }
+        }
+      });
+
+      // 5. Update post count on Category / Tag pages
+      ['#page-category', '#page-tag'].forEach(function (pageSel) {
+        var container = document.querySelector(pageSel);
+        if (container) {
+          var countEl = container.querySelector('h1 span.lead');
+          var visibleItems = container.querySelectorAll('ul.content > li:not(.upcoming-post-hidden)');
+          if (countEl) {
+            countEl.textContent = String(visibleItems.length);
+          }
+        }
+      });
+
+      // 6. Preserve the URL parameter across internal links when in preview mode
+      if (showUpcoming && activeParamKey) {
+        document.querySelectorAll('a[href]').forEach(function (a) {
+          var href = a.getAttribute('href');
+          if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('javascript:')) return;
+          try {
+            var url = new URL(href, window.location.origin);
+            if (url.origin === window.location.origin && !url.searchParams.has(activeParamKey)) {
+              url.searchParams.set(activeParamKey, activeParamVal);
+              a.setAttribute('href', url.pathname + url.search + url.hash);
+            }
+          } catch (e) {}
+        });
+      }
+    }
+
+    // Run as DOM parses to prevent flicker, and again on DOMContentLoaded
+    var observer = new MutationObserver(function () {
+      processUpcomingPosts();
+    });
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      observer.disconnect();
+      processUpcomingPosts();
+    });
+  })();
+</script>
