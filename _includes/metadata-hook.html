@@ -1,4 +1,3 @@
-<!-- Upcoming / Scheduled Posts URL Parameter Filter -->
 <style>
   .upcoming-post-hidden {
     display: none !important;
@@ -37,16 +36,30 @@
     var nowSec = Math.floor(Date.now() / 1000);
 
     function getItemTimestamp(el) {
+      var cachedTs = el.getAttribute('data-post-ts');
+      if (cachedTs) return parseInt(cachedTs, 10);
       var directTs = el.getAttribute('data-ts');
-      if (directTs) return parseInt(directTs, 10);
-      var timeEl = el.querySelector('[data-ts]');
-      if (timeEl) return parseInt(timeEl.getAttribute('data-ts'), 10);
+      if (directTs) {
+        el.setAttribute('data-post-ts', directTs);
+        return parseInt(directTs, 10);
+      }
+      var timeEl = el.querySelector('[data-post-ts], [data-ts]');
+      if (timeEl) {
+        var ts = timeEl.getAttribute('data-post-ts') || timeEl.getAttribute('data-ts');
+        if (ts) {
+          timeEl.setAttribute('data-post-ts', ts);
+          el.setAttribute('data-post-ts', ts);
+          return parseInt(ts, 10);
+        }
+      }
       return NaN;
     }
 
     function addUpcomingBadge(container) {
       if (container.querySelector('.upcoming-badge')) return;
-      var timeEl = container.querySelector('time[data-ts], span.date.month[data-ts]');
+      var timeEl = container.querySelector(
+        'time[data-post-ts], time[data-ts], span.date.month[data-post-ts], span.date.month[data-ts]'
+      );
       if (timeEl && timeEl.parentNode) {
         var badge = document.createElement('span');
         badge.className = 'upcoming-badge';
@@ -58,7 +71,6 @@
     function processUpcomingPosts() {
       nowSec = Math.floor(Date.now() / 1000);
 
-      // 1. Home page cards, Archive items, Category/Tag items, Related posts
       var selectors = [
         '#post-list > article.card-wrapper',
         '#archives li',
@@ -79,7 +91,6 @@
         }
       });
 
-      // 2. Recently Updated sidebar (#access-lastmod) — keep max 5 visible items
       var lastmodItems = document.querySelectorAll('#access-lastmod ul.content > li');
       if (lastmodItems.length > 0) {
         var visibleCount = 0;
@@ -95,20 +106,23 @@
         });
       }
 
-      // 3. Post page header badge + Previous/Next navigation buttons
       var postHeaderMeta = document.querySelector('article header .post-meta');
       if (postHeaderMeta) {
-        var headerTime = postHeaderMeta.querySelector('time[data-ts]');
+        var headerTime = postHeaderMeta.querySelector('time[data-post-ts], time[data-ts]');
         if (headerTime) {
-          var postTs = parseInt(headerTime.getAttribute('data-ts'), 10);
-          if (!isNaN(postTs) && postTs > nowSec) {
-            addUpcomingBadge(postHeaderMeta);
+          var rawTs = headerTime.getAttribute('data-post-ts') || headerTime.getAttribute('data-ts');
+          if (rawTs) {
+            headerTime.setAttribute('data-post-ts', rawTs);
+            var postTs = parseInt(rawTs, 10);
+            if (!isNaN(postTs) && postTs > nowSec) {
+              addUpcomingBadge(postHeaderMeta);
+            }
           }
         }
       }
 
-      document.querySelectorAll('.post-navigation a[data-ts]').forEach(function (navLink) {
-        var ts = parseInt(navLink.getAttribute('data-ts'), 10);
+      document.querySelectorAll('.post-navigation a[data-post-ts]').forEach(function (navLink) {
+        var ts = parseInt(navLink.getAttribute('data-post-ts'), 10);
         if (!isNaN(ts) && ts > nowSec && !showUpcoming) {
           var disabledDiv = document.createElement('div');
           disabledDiv.className = 'btn btn-outline-primary disabled';
@@ -118,7 +132,6 @@
         }
       });
 
-      // 4. Hide empty year groups in Archives
       document.querySelectorAll('#archives ul.list-unstyled').forEach(function (ul) {
         var visibleLis = ul.querySelectorAll('li:not(.upcoming-post-hidden)');
         var yearHeader = ul.previousElementSibling;
@@ -135,7 +148,6 @@
         }
       });
 
-      // 5. Update post count on Category / Tag pages
       ['#page-category', '#page-tag'].forEach(function (pageSel) {
         var container = document.querySelector(pageSel);
         if (container) {
@@ -147,7 +159,6 @@
         }
       });
 
-      // 6. Preserve the URL parameter across internal links when in preview mode
       if (showUpcoming && activeParamKey) {
         document.querySelectorAll('a[href]').forEach(function (a) {
           var href = a.getAttribute('href');
@@ -163,7 +174,6 @@
       }
     }
 
-    // Run as DOM parses to prevent flicker, and again on DOMContentLoaded
     var observer = new MutationObserver(function () {
       processUpcomingPosts();
     });

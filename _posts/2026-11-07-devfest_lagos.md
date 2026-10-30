@@ -569,7 +569,7 @@ export const searchLagosKnowledge = ai.defineTool(
 ### Engineering Resilience for Small Local Models (`src/lib/tool-execution-helper.ts`)
 
 When working with compact edge models (`2B–4B` parameters) across diverse attendee laptops and Ollama builds, two practical edge cases can surface:
-1. Certain quantized Ollama model templates omit the `{{ .Tools }}` block, causing the model to emit JSON tool calls in plain text rather than native `tool_calls` payloads.
+1. Certain quantized Ollama model templates omit the `{% raw %}{{ .Tools }}{% endraw %}` block, causing the model to emit JSON tool calls in plain text rather than native `tool_calls` payloads.
 2. Small models occasionally call only one tool when a complex multi-part prompt requires chaining all three (`searchLagosKnowledge` + `getLagosWeatherAndMarine` + `findLagosTours`).
 
 To make our workshop 100% deterministic across every Ollama version, we include two complementary layers:
@@ -682,7 +682,7 @@ During hands-on workshops with local models, a few predictable environment issue
 | `fetch failed` or `ECONNREFUSED 127.0.0.1:11434` | Ollama daemon is not running locally | Run `ollama serve` in a background terminal or launch the Ollama desktop app, then re-run `npm run verify`. |
 | `model 'gemma4:e2b' not found` | Model tag has not been pulled yet | Run `ollama pull gemma4:e2b` (or set `GEMMA_MODEL=gemma3:4b` in `.env` if using an already cached tag). |
 | `Model ollama/gemma4:e2b does not support tools` | Missing `supports: { tools: true }` in plugin config | Verify `src/config/genkit.ts` includes `supports: { tools: true }` inside the `ollama({ models: [...] })` declaration. |
-| Model outputs raw JSON tool call text instead of invoking the tool | Local Ollama model tag template omits `{{ .Tools }}` | Automatic fallback in `src/lib/tool-execution-helper.ts` handles this transparently; or run `ollama create gemma4-tools -f Modelfile.gemma4-tools`. |
+| Model outputs raw JSON tool call text instead of invoking the tool | Local Ollama model tag template omits `{% raw %}{{ .Tools }}{% endraw %}` | Automatic fallback in `src/lib/tool-execution-helper.ts` handles this transparently; or run `ollama create gemma4-tools -f Modelfile.gemma4-tools`. |
 | Retriever returns `0` chunks in Step 02 or Step 04 | Local vector index file `__db_lagos_tourism.json` was deleted or corrupted | Run `npm run step 2` (which calls `ensureLagosKnowledgeIndexed()`) or pass `{ "forceReindex": true }` in the Genkit UI. |
 | Conference Wi-Fi blocks outbound calls to `api.open-meteo.com` | Captive portal or offline network | `src/lib/weather-service.ts` automatically falls back to deterministic Ponta da Piedade telemetry after a `3.5s` timeout, or pass `-- calm` / `-- nortada_windy`. |
 
