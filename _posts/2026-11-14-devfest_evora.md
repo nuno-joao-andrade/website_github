@@ -11,12 +11,12 @@ image:
   alt: "Building an Autonomous Academic Assistant with Google ADK, Gemma 4 & Dynamic RAG — DevFest GDG Évora 2026"
 ---
 
-> **Workshop GitHub Repository**: [https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/](https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/)
-> **Interactive Presentation Slides**: [https://nuno-joao-andrade-dev.github.io/devfest_gdgevora_2026/slides/](https://nuno-joao-andrade-dev.github.io/devfest_gdgevora_2026/slides/) ([Source in Repo](https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/tree/main/slides))
+> **Workshop GitHub Repository**: [https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/](https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/)
+> **Interactive Presentation Slides**: [https://nuno-joao-andrade-dev.github.io/devfest_evora_2026/slides/](https://nuno-joao-andrade-dev.github.io/devfest_evora_2026/slides/) ([Source in Repo](https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/tree/main/slides))
 >
 > ```bash
-> git clone https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026.git
-> cd devfest_gdgevora_2026
+> git clone https://github.com/nuno-joao-andrade-dev/devfest_evora_2026.git
+> cd devfest_evora_2026
 > npm install
 > ollama pull gemma4:e2b && ollama pull embeddinggemma-2
 > npm run smoke
@@ -637,7 +637,7 @@ Here is the quick-reference diagnostic table used during `npm run smoke` and liv
 
 A huge **Muito Obrigado** to **GDG Évora** for the warm invitation to speak and run this workshop at **DevFest Évora 2026**, and to all the organizers, volunteers, students, and developers who joined this hands-on session in Évora!
 
-- **Workshop Repository & Code:** [https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/](https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/)
-- **Interactive Presentation Slides (with 60+ Speaker Q&As — press `S`):** [https://nuno-joao-andrade-dev.github.io/devfest_gdgevora_2026/slides/](https://nuno-joao-andrade-dev.github.io/devfest_gdgevora_2026/slides/) ([`slides/index.html`](https://github.com/nuno-joao-andrade-dev/devfest_gdgevora_2026/blob/main/slides/index.html))
+- **Workshop Repository & Code:** [https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/](https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/)
+- **Interactive Presentation Slides (with 60+ Speaker Q&As — press `S`):** [https://nuno-joao-andrade-dev.github.io/devfest_evora_2026/slides/](https://nuno-joao-andrade-dev.github.io/devfest_evora_2026/slides/) ([`slides/index.html`](https://github.com/nuno-joao-andrade-dev/devfest_evora_2026/blob/main/slides/index.html))
 - **Google Agent Development Kit (ADK) Documentation:** [google.github.io/adk-docs](https://google.github.io/adk-docs/)
 - **Google Gemma 4 & EmbeddingGemma on Ollama:** [ollama.com/library/gemma4](https://ollama.com/library/gemma4)
